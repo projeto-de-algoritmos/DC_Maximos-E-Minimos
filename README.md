@@ -1,7 +1,7 @@
-# Gerenciador de Tarefas
+# Máximos e Mínimos
 
-**Número da Lista**: Lista 03<br>
-**Conteúdo da Disciplina**: Greedy<br>
+**Número da Lista**: Lista 04<br>
+**Conteúdo da Disciplina**: Dividir para Conquistar<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -10,10 +10,7 @@
 | 17/0144259  |  Gustavo Nogueira Rodrigues |
 
 ## Sobre 
-O objetivo do projeto é selecionar um conjunto máximo de tarefas compatíveis a partir das tarefas inseridas pelo usuário.
-
-**Algoritmo utilizado:**
-Versão gulosa do Interval scheduling.
+O objetivo do projeto é encontrar máximos e mínimos de [funções unimodais](https://en.wikipedia.org/wiki/Unimodality) utilizando a busca ternária e exibir o funciomento do algoritmo em um gráfico.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
@@ -21,15 +18,16 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 ## Instalação 
 **Linguagem**: JavaScript<br>
 O projeto pode ser executado a partir dos navegadores google chrome ou mozilla firefox. Passos para execução:
-1) Clone do projeto: git clone git@github.com:projeto-de-algoritmos/Greedy-GerenciadorDeTarefas.git
-2) Abrir o arquivo index.html,contido dentro da pasta 'src', pelo navegador.
+1) Clone do projeto: git clone git@github.com:projeto-de-algoritmos/DC_Maximos-E-Minimos.git
+2) Abrir o arquivo index.html pelo navegador.
 
 ## Uso 
-1) O usuário inicialmente informa a quantidade de tarefas e a quantidade de horários disponíveis para realização das tarefas.
-2) Em seguida o usuário deve selecionar, a partir de uma tabela, os horários desejados para realização de cada tarefa. 
-3) Por fim, o usuário deve clicar no botão 'Enviar' para que seja encontrado o conjunto máximo de tarefas compatíveis e assim é retornado na interface esse conjunto.
+
 
 ## Outros 
 **Referências:**
-http://www.each.usp.br/digiampietri/SIN5013/13-algoritmosGulosos.pdf
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/ternary-search/)
+
+[Slide TEP](https://github.com/edsomjr/TEP/blob/master/Introducao/slides/BO-1/BO-1.pdf)
 
