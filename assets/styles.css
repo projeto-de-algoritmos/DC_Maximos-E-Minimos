@@ -1,0 +1,27 @@
+#chart-div{
+	display: block;
+	width: 70vw;
+	height: 72vh;
+	margin: 0px auto;
+	border: 2px solid rgba(10,10,255,0.7);
+	border-radius: 10px;
+}
+
+#btn-form{
+	height: 5vh;
+	margin-left: 1vw;
+}
+
+#form-div{
+	display: block;
+	width: 60vw;
+	margin: 1vh auto;
+	border: 1px solid gray;
+	padding-left: 2vw; 
+	border-radius: 10px;
+}
+
+#header{
+	color: white;
+	background-color: rgba(10,10,255,0.7);
+}
