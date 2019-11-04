@@ -10,7 +10,7 @@
 | 17/0144259  |  Gustavo Nogueira Rodrigues |
 
 ## Sobre 
-O objetivo do projeto é encontrar máximos e mínimos de [funções unimodais](https://en.wikipedia.org/wiki/Unimodality) utilizando a busca ternária e exibir o funciomento do algoritmo em um gráfico.
+O objetivo do projeto é encontrar máximos e mínimos de [funções unimodais](https://en.wikipedia.org/wiki/Unimodality) utilizando a busca ternária, bem como exibir o funciomento do algoritmo em um gráfico.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
@@ -27,7 +27,7 @@ O projeto pode ser executado a partir dos navegadores google chrome ou mozilla f
 ## Outros 
 **Referências:**
 
-[GeeksforGeeks](https://www.geeksforgeeks.org/ternary-search/)
-
 [Slide TEP](https://github.com/edsomjr/TEP/blob/master/Introducao/slides/BO-1/BO-1.pdf)
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/ternary-search/)
 
