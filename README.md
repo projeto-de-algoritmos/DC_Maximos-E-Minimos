@@ -13,7 +13,7 @@
 O objetivo do projeto é encontrar máximos e mínimos de [funções unimodais](https://en.wikipedia.org/wiki/Unimodality) utilizando a busca ternária, bem como exibir o funciomento do algoritmo em um gráfico.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![](demonstration.gif)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
@@ -22,7 +22,12 @@ O projeto pode ser executado a partir dos navegadores google chrome ou mozilla f
 2) Abrir o arquivo index.html pelo navegador.
 
 ## Uso 
-
+1) Inicialmente o usuário de informar a função que deseja encontrar um ponto extremo;
+2) Informar que tipo de ponto que deseja encontrar;
+3) Informar um intervalo em que a função seja unimodal;
+4) Informar como deseja visualizar o funcionamento do algoritmo;
+5) Clicar em buscar.
+* Para mais detalhes basta verificar o gif de demonstração.
 
 ## Outros 
 **Referências:**
