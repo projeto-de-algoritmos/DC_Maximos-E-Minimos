@@ -4,7 +4,7 @@
 	<title>Ternary Search</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
-	
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
@@ -12,7 +12,7 @@
 
 <body>
 	<div id="header">
-		<h2 align="center"><i>Busca Ternária</i></h2>	
+		<h2 align="center"><i>Busca Ternária</i></h2>
 	</div>
 
 	<div id="chart-div">
@@ -26,35 +26,35 @@
 				<input type="text" id="function" class="form-control">
 			</div>
 			<div class="form-group col-md-1.5">
-				<select class="custom-select">
+				<select class="custom-select" id="ptype">
 					<option selected>Tipo de ponto</option>
 					<option value="1">Ponto de Máximo</option>
 					<option value="2">Ponto de Mínimo</option>
-				</select>	
+				</select>
 			</div>
 			<button id="btn-form" class="btn btn-primary">
 				Ajuda
 			</button>
-		</div>				
+		</div>
 		<strong>Intervalo de busca:</strong>
 		<div class="form-row">
 			<div class="form-group col-md-1">
-				<input type="number" id="" placeholder="A" class="form-control">
+				<input type="number" id="minrange" placeholder="A" class="form-control">
 			</div>
 			<div class="form-group col-md-1">
-				<input type="number" id="" placeholder="B" class="form-control">
+				<input type="number" id="maxrange" placeholder="B" class="form-control">
 			</div>
 			<div class="form-group col-md-1.5">
 				<select class="custom-select">
 					<option selected>Visualização do Algoritmo</option>
 					<option value="1">Por Retas</option>
 					<option value="2">Por Curvas</option>
-				</select>	
-			</div>				
+				</select>
+			</div>
 			<button id="btn-form" onclick="search()" class="btn btn-primary">
 				Buscar
 			</button>
-		</div>			
+		</div>
 	</div>
 
 	<script src="assets/functions.js"></script>
