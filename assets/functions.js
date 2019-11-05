@@ -1,15 +1,12 @@
-const stepPlot = 1;
 const eps = 0.1;
 const delay = 1000;
 const addition = 0;
 let configChart;
 let setInt;
-
 let str_function;
-let a,
-  aMax = -10;
-let b,
-  bMax = 10;
+let a,aMax;
+let b,bMax;
+let viewType;
 
 /*
 let str_function = 'Math.sin(x)';
@@ -33,8 +30,8 @@ let ternarySearchMax = function() {
       fx: f(a + (b - a) / 2.0, str_function)
     };
     console.log(point);
-
     addDataset(searchNearestPoint(point.x), 8);
+    document.getElementById('span-point').innerHTML = `( x = ${point.x},f(x) = ${point.fx} )`;
     clearInterval(setInt);
   }
 
@@ -44,18 +41,22 @@ let ternarySearchMax = function() {
   let f2 = f(m2, str_function);
 
   if (f1 < f2) {
-    let line = interceptionLine(
-      { x: m1, y: f1 },
-      { x: b, y: f(b, str_function) }
-    );
-    addDataset(generateRange(m1, b, str_function, eps), 0);
+    if(viewType == '1'){
+      let line = interceptionLine({ x: m1, y: f1 },{ x: b, y: f(b, str_function) });
+      addDataset(generateRange(m1, b, line, eps), 0);
+    }
+    else{
+      addDataset(generateRange(m1, b, str_function, eps), 0);
+    }
     a = m1;
   } else {
-    let line = interceptionLine(
-      { x: a, y: f(a, str_function) },
-      { x: m2, y: f2 }
-    );
-    addDataset(generateRange(a, m2, str_function, eps), 0);
+    if(viewType == '1'){
+      let line = interceptionLine({ x: a, y: f(a, str_function) },{ x: m2, y: f2 });
+      addDataset(generateRange(a, m2, line, eps), 0);  
+    }
+    else{
+      addDataset(generateRange(a, m2, str_function, eps), 0);  
+    }
     b = m2;
   }
 };
@@ -67,8 +68,8 @@ let ternarySearchMin = function() {
       fx: f(a + (b - a) / 2.0, str_function)
     };
     console.log(point);
-
     addDataset(searchNearestPoint(point.x), 8);
+    document.getElementById('span-point').innerHTML = `( x = ${point.x},f(x) = ${point.fx} )`;
     clearInterval(setInt);
   }
 
@@ -78,20 +79,25 @@ let ternarySearchMin = function() {
   let f2 = f(m2, str_function);
 
   if (f1 > f2) {
-    let line = interceptionLine(
-      { x: m1, y: f1 },
-      { x: b, y: f(b, str_function) }
-    );
-    addDataset(generateRange(m1, b, str_function, eps), 0);
+    if(viewType == '1'){
+      let line = interceptionLine({ x: m1, y: f1 },{ x: b, y: f(b, str_function) });
+      addDataset(generateRange(m1, b, line, eps), 0);
+    }
+    else{
+      addDataset(generateRange(m1, b, str_function, eps), 0);
+    }
     a = m1;
   } else {
-    let line = interceptionLine(
-      { x: a, y: f(a, str_function) },
-      { x: m2, y: f2 }
-    );
-    addDataset(generateRange(a, m2, str_function, eps), 0);
+    if(viewType == '1'){
+      let line = interceptionLine({ x: a, y: f(a, str_function) },{ x: m2, y: f2 });
+      addDataset(generateRange(a, m2, line, eps), 0);  
+    }
+    else{
+      addDataset(generateRange(a, m2, str_function, eps), 0);  
+    }
     b = m2;
   }
+
 };
 
 function generateColor() {
@@ -198,12 +204,15 @@ function addDataset(data, radius) {
 
 function search() {
   str_function = $("#function").val();
-  const minRange = $("#minrange").val();
-  const maxRange = $("#maxrange").val();
+  aMax = parseInt($("#minrange").val());;
+  bMax = parseInt($("#maxrange").val());
+  viewType = $("#view-type").val();
   const pointType = $("#ptype").val();
   a = aMax;
   b = bMax;
-  let points = generateRange(aMax, bMax, str_function, eps);
+  console.log(viewType);
+  
+  let points = generateRange(a, b, str_function, eps);
   let config = createConfigChart(str_function, points);
   let ctx = document.getElementById("chart-area").getContext("2d");
   window.myLine = new Chart(ctx, config);

@@ -20,7 +20,7 @@
         <div class="modal-body">
           <p> <strong> Função: </strong> Função da qual deseja-se encontrar o máximo ou menor valor. Deve estar em um formato que possa ser interpretado pela função <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval"> eval </a> do javascript. Ex: Math.pow(x,2) </p>
           <p> <strong> Tipo de ponto: </strong> Indica qual tipo de busca ternária deve ser realizada: Máximo ou mínimo.
-          <p> <strong> Intervalo de busca: </strong> Define o intervalo sobre o qual a busca será realizada. Deve estar em [-10:10].
+          <p> <strong> Intervalo de busca: </strong> Define o intervalo sobre o qual a busca será realizada. A função deve ser <a href="https://pt.wikipedia.org/wiki/Unimodalidade">unimodal</a> nesse intervalo.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -50,29 +50,30 @@
 					<option value="2">Ponto de Mínimo</option>
 				</select>
 			</div>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHelp">
+			<button type="button" class="btn btn-primary btn-form" data-toggle="modal" data-target="#modalHelp">
 				Ajuda
 			</button>
 		</div>
 		<strong>Intervalo de busca:</strong>
 		<div class="form-row">
-			<div class="form-group col-md-1">
+			<div class="form-group col-md-2">
 				<input type="number" id="minrange" placeholder="A" class="form-control">
 			</div>
-			<div class="form-group col-md-1">
+			<div class="form-group col-md-2">
 				<input type="number" id="maxrange" placeholder="B" class="form-control">
 			</div>
 			<div class="form-group col-md-1.5">
-				<select class="custom-select">
+				<select class="custom-select" id="view-type">
 					<option selected>Visualização do Algoritmo</option>
 					<option value="1">Por Retas</option>
 					<option value="2">Por Curvas</option>
 				</select>
 			</div>
-			<button id="btn-form" onclick="search()" class="btn btn-primary">
+			<button onclick="search()" class="btn btn-primary btn-form">
 				Buscar
 			</button>
 		</div>
+		<span style="margin-left: 1vw;">Ponto extremo: </span><span id="span-point"></span>
 	</div>
 
 	<script src="assets/functions.js"></script>
