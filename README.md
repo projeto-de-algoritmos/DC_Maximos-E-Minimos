@@ -22,12 +22,12 @@ O projeto pode ser executado a partir dos navegadores google chrome ou mozilla f
 2) Abrir o arquivo index.html pelo navegador.
 
 ## Uso 
-1) Inicialmente o usuário de informar a função que deseja encontrar um ponto extremo;
+1) Inicialmente o usuário de informar a função que deseja encontrar um ponto extremo. Para funções, como seno e potência, a entrada deve seguir a sintaxe para chamada de funções do Javascript. Para expressões,como 2*x + 5, deve seguir a sintaxe utilizada para os operações aritméticos do Javascript. **A variável independente sempre deve ser x**;
 2) Informar que tipo de ponto que deseja encontrar;
 3) Informar um intervalo em que a função seja unimodal;
 4) Informar como deseja visualizar o funcionamento do algoritmo;
 5) Clicar em buscar.
-* Para mais detalhes basta verificar o gif de demonstração.
+* Para mais detalhes basta verificar o gif de demonstração ou clicar no botão de ajuda.
 
 ## Outros 
 **Referências:**
